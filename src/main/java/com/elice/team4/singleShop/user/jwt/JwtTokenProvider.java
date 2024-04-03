@@ -27,7 +27,8 @@ public class JwtTokenProvider {
 
     private final UserDetailsService userDetailsService;
 
-    public JwtTokenProvider(@Qualifier("UserDetailsService") UserDetailsService userDetailsService) {
+    // 파라미터에 @Qualifier("UserDetailsService") 추가
+    public JwtTokenProvider(UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 
