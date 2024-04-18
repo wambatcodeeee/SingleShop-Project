@@ -74,27 +74,6 @@ public class OrderService {
         return order.getId(); // 생성된 주문 ID
     }
 
-    // 주문에 배송 정보 추가
-    /*public void addDeliveryInfo(Long orderId, DeliveryInfo deliveryInfoDto) {
-        Order order = orderRepository.findById(orderId)
-                .orElseThrow(EntityNotFoundException::new);
-
-        // 배송 정보 생성
-        DeliveryInfo deliveryInfo = new DeliveryInfo();
-        deliveryInfo.setReceiverName(deliveryInfoDto.getReceiverName());
-        deliveryInfo.setReceiverPhoneNumber(deliveryInfoDto.getReceiverPhoneNumber());
-        deliveryInfo.setPostalCode(deliveryInfoDto.getPostalCode());
-        deliveryInfo.setAddress1(deliveryInfoDto.getAddress1());
-        deliveryInfo.setAddress2(deliveryInfoDto.getAddress2());
-        deliveryInfo.setDeliveryRequest(deliveryInfoDto.getDeliveryRequest());
-
-        // 주문에 배송 정보 연결
-        order.setDeliveryInfo(deliveryInfo);
-
-        // 배송 정보 저장
-        deliveryInfoRepository.save(deliveryInfo);
-    }*/
-
     // 주문 목록 조회
     @Transactional
     public Page<OrderHistDto> getOrderList(String email, Pageable pageable) {

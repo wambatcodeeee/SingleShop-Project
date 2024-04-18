@@ -150,7 +150,7 @@ async function insertUserData() {
 
     console.log({id});
 
-    userData = await Api.get("/api/users", id);
+    const userData = await Api.get("/api/users", id);
 
     // 객체 destructuring
     const { name, email, address, phoneNumber } = userData;

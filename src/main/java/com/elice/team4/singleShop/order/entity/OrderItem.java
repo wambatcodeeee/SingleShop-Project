@@ -43,12 +43,9 @@ public class OrderItem {
     @LastModifiedDate
     private LocalDateTime updateTime; // 수정 시간
 
-    @CreatedBy
-    @Column(updatable = false)
-    private String createdBy; // 등록자
+    private String summaryTitle;
 
-    @LastModifiedDate
-    private String modifiedBy; // 수정자
+    private Integer totalPrice;
 
     private String receiverName; // 수령인 이름
 
@@ -59,6 +56,8 @@ public class OrderItem {
     private String address1; // 주소
 
     private String address2; // 상세 주소
+
+    private String request;
 
     private String deliveryRequest; // 배송 요청 사항
     

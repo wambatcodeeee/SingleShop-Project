@@ -1,6 +1,6 @@
 package com.elice.team4.singleShop.order.dto;
 
-import jakarta.persistence.GeneratedValue;
+import com.elice.team4.singleShop.order.entity.Order;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -32,4 +32,6 @@ public class OrderDto {
     private String address2;
 
     private String deliveryRequest;
+
+
 }

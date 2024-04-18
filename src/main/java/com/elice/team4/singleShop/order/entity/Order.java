@@ -32,10 +32,6 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> orderItems = new ArrayList<>();
 
-    /*@OneToOne(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "delivery_info_id")
-    private DeliveryInfo deliveryInfo;*/
-
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime regTime; // 등록 시간
@@ -43,12 +39,11 @@ public class Order {
     @LastModifiedDate
     private LocalDateTime updateTime; // 수정 시간
 
-    @CreatedBy
-    @Column(updatable = false)
-    private String createdBy; // 등록자
-
-    @LastModifiedDate
     private String modifiedBy; // 수정자
+
+    private String summaryTitle;
+
+    private Integer totalPrice;
 
     private String receiverName; // 수령인 이름
 
@@ -61,6 +56,8 @@ public class Order {
     private String address2; // 상세 주소
 
     private String deliveryRequest; // 배송 요청 사항
+
+    private String request;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

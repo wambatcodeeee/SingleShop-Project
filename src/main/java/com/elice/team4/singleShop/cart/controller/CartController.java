@@ -99,7 +99,7 @@ public class CartController {
 
 
 
-    // 구매하기누르면 장바구니 삭제
+    /*// 구매하기누르면 장바구니 삭제
     @GetMapping("/order/checkout")
     public String myCartPaymentAndClear(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -107,7 +107,7 @@ public class CartController {
         User user = userRepository.getByName(username);
         cartService.cartPaymentAndClear(user.getId());
         return "order/order-complete";
-    }
+    }*/
 /*
     // 선택한 상품들로 구매하기
     @PostMapping("/cart/buy")
